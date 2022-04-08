@@ -1,6 +1,26 @@
 import React from "react";
 
 export default function HomeComponent() {
+  const users = [
+    {
+      id: 1,
+      nama: "Aris",
+      alamat: "Babantar",
+      umur: 13,
+    },
+    {
+      id: 2,
+      nama: "Aris",
+      alamat: "Babantar",
+      umur: 13,
+    },
+    {
+      id: 3,
+      nama: "Aris",
+      alamat: "Babantar",
+      umur: 13,
+    },
+  ];
   return (
     <div className="w-full h-screen">
       <h1 className="font-bold text-2xl text-center py-10">Form Data</h1>
@@ -55,6 +75,70 @@ export default function HomeComponent() {
           </form>
         </div>
       </div>
+      <span className=" text-2xl font-bold py-10">Hai</span>
+      <TableComponent />
+    </div>
+  );
+}
+
+export function TableComponent() {
+  return (
+    <div className="my-5 mx-32">
+      <table className="table-auto border-collapse border border-slate-400 w-full">
+        <thead className="bg-gray-50 border-2">
+          <tr>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              No.
+            </th>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              Nama Depan
+            </th>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              Nama Belakang
+            </th>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              Alamat
+            </th>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              Pekerjaan
+            </th>
+            <th className="border border-slate-300 p-3 text-left tracking-wide">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-slate-300 p-2">1</td>
+            <td className="border border-slate-300 p-2">Asep</td>
+            <td className="border border-slate-300 p-2">Ahmad</td>
+            <td className="border border-slate-300 p-2">
+              Jl Bojong soabf kabupaten bandung
+            </td>
+            <td className="border border-slate-300 p-2">Pro Gammer</td>
+            <td className="border border-slate-300 p-2">
+              <div className="space-x-2 text-center">
+                <button className="bg-green-400 text-white px-2 py-1 rounded">
+                  Edit
+                </button>
+                <button className="bg-red-600 text-white px-2 py-1 rounded">
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-slate-300 p-2">1</td>
+            <td className="border border-slate-300 p-2">Asep</td>
+            <td className="border border-slate-300 p-2">Ahmad</td>
+            <td className="border border-slate-300 p-2">
+              Jl Bojong soabf kabupaten bandung
+            </td>
+            <td className="border border-slate-300 p-2">Pro Gammer</td>
+            <td className="border border-slate-300 p-2">1961</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
