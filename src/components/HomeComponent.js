@@ -22,6 +22,7 @@ export default function HomeComponent() {
   const logOut = () => {
     localStorage.removeItem("profile");
     localStorage.removeItem("isLogin");
+    alert("Berhasil Logout");
     navigate("/");
   };
 

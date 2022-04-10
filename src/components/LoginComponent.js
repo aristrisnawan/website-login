@@ -40,17 +40,16 @@ export default function LoginComponent() {
 
 export function MasukComponent() {
   const navigate = useNavigate();
-  const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
-  const onSubmit = async (data, e) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    // console.log(data);
     const user = await kontenbase.auth.login(data);
     console.log(user.user);
     if (user.status == 200) {
       localStorage.setItem("profile", JSON.stringify(user.user));
       localStorage.setItem("isLogin", "true");
+      alert("Berhasil Login");
       navigate("/home");
     }
   };
